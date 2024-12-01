@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zenity --info --title="Carte du Morbihan" --text="Ce script utilise QGIS, un logiciel open-source de donner cartographique, p7zip-full un équivalent de 7zip pour linux open-source pour décompresser les fichiers 7z. La carte est récupérer sur les serveurs IGN-FRANCE. Cela implique donc dès l'utilisation de ces cartes l'acceptation imédiate de toutes les conditions d'utilisation de IGN-FRANCE. Pour plus d'informatiqon, consulter : https://geoservices.ign.fr/cgu-licences . Si vous penser que votre utilisation de ces cartes n'est pas conforme, fermer la fenêtre de terminal sans cliquer sur Valider."
+zenity --info --title="Carte du Morbihan" --text="Ce script utilise QGIS, un logiciel open-source de donner cartographique, p7zip-full un équivalent de 7zip pour linux open-source pour décompresser les fichiers 7z. La carte est récupérer sur les serveurs IGN-FRANCE. Cela implique donc dès l'utilisation de ces cartes l'acceptation imédiate de toutes les conditions d'utilisation de IGN-FRANCE. Pour plus d'information, consulter : https://geoservices.ign.fr/cgu-licences . Si vous penser que votre utilisation de ces cartes n'est pas conforme, fermer la fenêtre de terminal sans cliquer sur Valider."
 
 zenity --warning --title="Confirmation" --text="Vous êtes sur le point de continuer. Si l'utilisation de ce script n'est pas conforme au politique de IGN-FRANCE, InformatiquePro sera en aucun cas responsable de votre manquement au condition d'utilisation IGN-FRANCE."
 

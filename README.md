@@ -12,5 +12,5 @@ De plus, même si cela fonctionne aussi avec Windows, ce script fonctionne **UNI
 ## Pour l'utiliser, c'est simple :
 
 **
-Lancer dans votre terminal, après avoir récupéré le fichier install-ign-morbihan.sh et être positionner dans le dossier ou il est télécharger : `chmod +X install-ign-morbihan.sh` puis `./install-ign-morbihan.sh`
+Lancer dans votre terminal, après avoir récupéré le fichier install-ign-morbihan.sh et être positionner dans le dossier ou il est télécharger : `chmod +X le-nom-du-script-choisi.sh` puis `./le-nom-du-script_choisi.sh`
 **ET voila !!**

@@ -9,18 +9,23 @@ zenity --warning --title="Confirmation" --text="Vous êtes sur le point de conti
 zenity --info --title="Stockage" --text="Il est nécéssaire en moyenne d'au moins 4GO de stockage libre."
 
 
-# Vérifier si p7zip-full est installé
-if ! dpkg -s p7zip-full &> /dev/null; then
-  echo "p7zip-full n'est pas installé. Installation en cours..."
-  sudo pacman -S p7zip
+# Vérifier si p7zip est installé
+if ! is_package_installed p7zip; then
+  # Si QGIS n'est pas installé, l'installer
+  echo "p7zip n'est pas installé. Lancement de l'installation..."
+  sudo pacman -S qgis
+else
+  echo "p7zip est déjà installé."
 fi
 
 # Vérifier si QGIS est installé
-if ! dpkg -s qgis &> /dev/null; then
-  echo "QGIS n'est pas installé. Installation en cours..."
+if ! is_package_installed qgis; then
+  # Si QGIS n'est pas installé, l'installer
+  echo "QGIS n'est pas installé. Lancement de l'installation..."
   sudo pacman -S qgis
+else
+  echo "QGIS est déjà installé."
 fi
-
 # Télécharger la carte du Morbihan
 wget https://data.geopf.fr/telechargement/download/BDTOPO/BDTOPO_3-4_TOUSTHEMES_GPKG_LAMB93_D056_2024-09-15/BDTOPO_3-4_TOUSTHEMES_GPKG_LAMB93_D056_2024-09-15.7z
 

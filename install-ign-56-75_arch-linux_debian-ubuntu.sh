@@ -16,7 +16,7 @@ fi
 # Vérifier si p7zip-full est installé
 if ! command -v 7z &> /dev/null; then
   echo "p7zip-full n'est pas installé. Installation en cours..."
-  if [ -f /etc/manjaro-release ]; then
+  if [ -f /etc/arch-release ] || [ -f /etc/manjaro-release ]; then
     sudo pacman -Syu --noconfirm p7zip
   else
     sudo apt update
@@ -27,7 +27,7 @@ fi
 # Vérifier si QGIS est installé
 if ! command -v qgis &> /dev/null; then
   echo "QGIS n'est pas installé. Installation en cours..."
-  if [ -f /etc/manjaro-release ]; then
+  if [ -f /etc/arch-release ] || [ -f /etc/manjaro-release ]; then
     sudo pacman -Syu --noconfirm qgis
   else
     sudo apt update
@@ -66,7 +66,6 @@ if [ $? -ne 0 ]; then
 fi
 
 zenity --info --title="Ré-ouverture" --text="Si vous voulez ré-ouvrir les cartes, ne rééxécutez pas ce script, ouvrez plutot le dossier télécharger, ensuite BDTOPO, après _DONNEES_LIVRAISON_2024-09-00152, ensuite BDT_3-4_GPKG_LAMB93_D0/votre-département/, et enfin ouvrez ce fichier : BDT_3-4_GPKG_LAMB93_D0/votre-département/.gpkg dans qgis. "
-
 
 # Ouvrir le fichier .gpkg dans QGIS
 if [ -f "$fichier_gpkg" ]; then

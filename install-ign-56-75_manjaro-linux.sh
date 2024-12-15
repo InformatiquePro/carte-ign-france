@@ -2,6 +2,8 @@
 
 zenity --info --title="Carte IGN" --text="Ce script utilise QGIS, un logiciel open-source de cartographie, et p7zip-full pour décompresser les fichiers. Les cartes sont récupérées sur les serveurs IGN-France. L'utilisation des cartes implique l'acceptation des conditions d'utilisation de IGN-France. Pour plus d'informations : https://geoservices.ign.fr/cgu-licences."
 
+zenity --warning --title="Confirmation" --text="Vous êtes sur le point de continuer. Si l'utilisation de ce script n'est pas conforme au politique de IGN-FRANCE, InformatiquePro sera en aucun cas responsable de votre manquement au condition d'utilisation IGN-FRANCE."
+
 # Demander le numéro de département
 departement=$(zenity --entry --title="Choix du département" --text="Entrez le numéro du département que vous souhaitez télécharger (ex: 56 pour Morbihan, 75 pour Paris) :")
 
@@ -62,6 +64,9 @@ if [ $? -ne 0 ]; then
   zenity --error --title="Erreur" --text="La décompression du fichier a échoué. Assurez-vous que p7zip-full est correctement installé."
   exit 1
 fi
+
+zenity --info --title="Ré-ouverture" --text="Si vous voulez ré-ouvrir les cartes, ne rééxécutez pas ce script, ouvrez plutot le dossier télécharger, ensuite BDTOPO, après _DONNEES_LIVRAISON_2024-09-00152, ensuite BDT_3-4_GPKG_LAMB93_D0/votre-département/, et enfin ouvrez ce fichier : BDT_3-4_GPKG_LAMB93_D0/votre-département/.gpkg dans qgis. "
+
 
 # Ouvrir le fichier .gpkg dans QGIS
 if [ -f "$fichier_gpkg" ]; then

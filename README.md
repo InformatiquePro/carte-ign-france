@@ -16,6 +16,8 @@ De plus, même si cela fonctionne aussi avec Windows, ce script fonctionne **UNI
 
 ## Pour l'utiliser, c'est simple :
 
+*Note : ce script est en développement, je l'ai uniquement testé sur Manjaro Linux et Ubuntu, donc il est possible de rencontrer des erreurs. Un minimum de connaissance en Linux de manière générale est très fortement recommander avant de lancer le scripte. InformatiquePro n'est en aucun cas responsable de tous problème futur causé par mon scripte.*
+
 **
 Lancer dans votre terminal, après avoir récupéré le fichier correspondant à votre distribution Linux, et être positionner dans le dossier ou il est télécharger : `chmod +X le-nom-du-script-choisi.sh` puis `./le-nom-du-script_choisi.sh`
 **ET voila !!**

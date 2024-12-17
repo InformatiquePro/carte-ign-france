@@ -2,7 +2,7 @@
 *Sorry for the English, I speak French*
 
 Voila des scriptes qui permettent de télécharger les cartes IGN du Morbihan (56) et de Paris (75).
-*Note : le script pour debian/ubuntu fonctionne **UNIQUEMENT** sur les distributions basé sur debian/ubuntu alors que le script pour Arch Linux est aussi compatible aux distributions linux basé sur debian/ubuntu.*
+*Note : Le scripte de pour Ubuntu/Debian n'est plus **maintenut**, il ne recevra plus les nouveautés et je ne vous recommande pas de l'utiliser.*
 
 ## Avertissement !!!
 
@@ -12,7 +12,6 @@ De plus, même si cela fonctionne aussi avec Windows, ce script fonctionne **UNI
 
 *Note 1 : le script pour Arch Linux détecte si vous êtes sur arch linux (ou dérivée) en vérifiant la présence de ce fichier : `/etc/arch-release` et si votre distribution basée sur Arch Linux à retirer ce fichier, le scripte lancera la version debian/ubuntu. Noter que ce scripte est encore perfectible.**
 
-*Note 2 : Etant donner que le script compatiible Arch Linux et dérivé incluant la compatibilité debian/ubuntu et dériver fonctionne correctement, je pense que je ne vais plus ajouter les nouvelles fonctionnalitées dans la version fonctionnement uniquement sur les distributions Linux basée sur debian/ubuntu*
 
 ## Pour l'utiliser, c'est simple :
 

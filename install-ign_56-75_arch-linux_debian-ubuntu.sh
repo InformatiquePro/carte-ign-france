@@ -11,7 +11,6 @@ if ! command -v zenity &> /dev/null; then
   fi
 fi
 
-
 zenity --info --title="Carte IGN" --text="Ce script utilise QGIS, un logiciel open-source de cartographie, et p7zip-full pour décompresser les fichiers. Les cartes sont récupérées sur les serveurs IGN-France. L'utilisation des cartes implique l'acceptation des conditions d'utilisation de IGN-France. Pour plus d'informations : https://geoservices.ign.fr/cgu-licences."
 
 zenity --warning --title="Confirmation" --text="Vous êtes sur le point de continuer. Si l'utilisation de ce script n'est pas conforme au politique de IGN-FRANCE, InformatiquePro sera en aucun cas responsable de votre manquement au condition d'utilisation IGN-FRANCE."
@@ -56,6 +55,10 @@ case "$departement" in
   75)
     url="https://data.geopf.fr/telechargement/download/BDTOPO/BDTOPO_3-4_TOUSTHEMES_GPKG_LAMB93_D075_2024-09-15/BDTOPO_3-4_TOUSTHEMES_GPKG_LAMB93_D075_2024-09-15.7z"
     fichier_gpkg="BDTOPO_3-4_TOUSTHEMES_GPKG_LAMB93_D075_2024-09-15/BDTOPO/1_DONNEES_LIVRAISON_2024-09-00152/BDT_3-4_GPKG_LAMB93_D075-ED2024-09-15/BDT_3-4_GPKG_LAMB93_D075-ED2024-09-15.gpkg"
+    ;;
+  01)
+    url="https://data.geopf.fr/telechargement/download/BDTOPO/BDTOPO_3-4_TOUSTHEMES_GPKG_LAMB93_D001_2024-09-15/BDTOPO_3-4_TOUSTHEMES_GPKG_LAMB93_D001_2024-09-15.7z"
+    fichier_gpkg="BDTOPO_3-4_TOUSTHEMES_GPKG_LAMB93_D001_2024-09-15/BDTOPO/1_DONNEES_LIVRAISON_2024-09-00152/BDT_3-4_GPKG_LAMB93_D001-ED2024-09-15/BDT_3-4_GPKG_LAMB93_D001-ED2024-09-15.gpkg"
     ;;
   *)
     zenity --error --title="Erreur" --text="Département non supporté. Actuellement, seuls les départements 56 et 75 sont pris en charge."

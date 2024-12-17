@@ -1,4 +1,11 @@
 #!/bin/bash
+#ce scripte n'est PLUS MAINTENUT !!!!!!!! LES NOUVELLES VERSIONS SERONT DANS L'AUTRE SCRIPTE.
+echo "ce scripte n'est PLUS MAINTENUT !!!!!!!! LES NOUVELLES VERSIONS SERONT DANS L'AUTRE SCRIPTE."
+
+zenity --warning --title="arrêt de support" --text="ce scripte n'est PLUS MAINTENUT !!!!!!!! LES NOUVELLES VERSIONS SERONT DANS L'AUTRE SCRIPTE."
+zenity --warning --title="arrêt de support" --text="ce scripte n'est PLUS MAINTENUT !!!!!!!! LES NOUVELLES VERSIONS SERONT DANS L'AUTRE SCRIPTE."
+zenity --warning --title="arrêt de support" --text="ce scripte n'est PLUS MAINTENUT !!!!!!!! LES NOUVELLES VERSIONS SERONT DANS L'AUTRE SCRIPTE."
+zenity --warning --title="arrêt de support" --text="ce scripte n'est PLUS MAINTENUT !!!!!!!! LES NOUVELLES VERSIONS SERONT DANS L'AUTRE SCRIPTE."
 
 zenity --info --title="Carte IGN" --text="Ce script utilise QGIS, un logiciel open-source de cartographie, et p7zip-full pour décompresser les fichiers. Les cartes sont récupérées sur les serveurs IGN-France. L'utilisation des cartes implique l'acceptation des conditions d'utilisation de IGN-France. Pour plus d'informations : https://geoservices.ign.fr/cgu-licences."
 

@@ -2,7 +2,7 @@
 
 # Vérifier si zenity est installer
 if ! command -v zenity &> /dev/null; then
-  echo "p7zip-full n'est pas installé. Installation en cours..."
+  echo "zenity n'est pas installé. Installation en cours..."
   if [ -f /etc/arch-release ] || [ -f /etc/manjaro-release ]; then
     sudo pacman -Syu --noconfirm zenity
   else

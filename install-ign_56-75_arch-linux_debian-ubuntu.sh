@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Vérifier si zenity est installer
+if ! command -v zenity &> /dev/null; then
+  echo "p7zip-full n'est pas installé. Installation en cours..."
+  if [ -f /etc/arch-release ] || [ -f /etc/manjaro-release ]; then
+    sudo pacman -Syu --noconfirm zenity
+  else
+    sudo apt update
+    sudo apt install -y zenity
+  fi
+fi
+
+
 zenity --info --title="Carte IGN" --text="Ce script utilise QGIS, un logiciel open-source de cartographie, et p7zip-full pour décompresser les fichiers. Les cartes sont récupérées sur les serveurs IGN-France. L'utilisation des cartes implique l'acceptation des conditions d'utilisation de IGN-France. Pour plus d'informations : https://geoservices.ign.fr/cgu-licences."
 
 zenity --warning --title="Confirmation" --text="Vous êtes sur le point de continuer. Si l'utilisation de ce script n'est pas conforme au politique de IGN-FRANCE, InformatiquePro sera en aucun cas responsable de votre manquement au condition d'utilisation IGN-FRANCE."

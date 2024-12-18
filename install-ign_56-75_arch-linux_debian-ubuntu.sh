@@ -65,7 +65,7 @@ case "$departement" in
     fichier_gpkg="BDTOPO_3-4_TOUSTHEMES_GPKG_RGM04UTM38S_D976_2024-09-15/BDTOPO/1_DONNEES_LIVRAISON_2024-09-00152/BDT_3-4_GPKG_RGM04UTM38S_D976-ED2024-09-15/BDT_3-4_GPKG_RGM04UTM38S_D976-ED2024-09-15.gpkg"
     ;;
   *)
-    zenity --error --title="Erreur" --text="Département non supporté. Actuellement, seuls les départements 56, 75 et 01 sont pris en charge."
+    zenity --error --title="Erreur" --text="Département non supporté. Pour connaitre les départements compatible, rdv sur ce fichier du projet Github : https://github.com/InformatiquePro/carte-ign-france/blob/main/departement-compatible.md"
     exit 1
     ;;
 esac

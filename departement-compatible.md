@@ -102,7 +102,7 @@
 | Val-de-Marne           | 94                  | ?      | ❌         |
 | Val-d'Oise             | 95                  | ?      | ❌         |
 | Guadeloupe             | 971                 | 809.1Mo| ✅         |
-| Martinique             | 972                 | ?      | ❌         |
+| Martinique             | 972                 | 636Mo  | ✅         |
 | Guyane                 | 973                 | ?      | ❌         |
 | La Réunion             | 974                 | ?      | ❌         |
 | Mayotte                | 976                 | 188,3Mo| ✅         |

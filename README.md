@@ -15,13 +15,9 @@ De plus, même si cela fonctionne aussi avec Windows, ce script fonctionne **UNI
 
 ## Département compatible : 
 
-| Département        |Numéro du département | Taille | Suporté ?  |
-| ------------------ | -------------------- | -----  | ---------- |
-| Morbihan           | 56                   | 3.2Go  | ✅         |
-| Paris              | 75                   | 1.5Go  | ✅         |
-| Ain                | 01                   | 2.5Go  | ✅         |
+[Liste des départements compatibles](https://github.com/InformatiquePro/carte-ign-france/blob/main/departement-compatible.md)
 
-*Les autres départements deviendront compatible à un moment donné*
+
 
 ## Pour l'utiliser, c'est simple :
 

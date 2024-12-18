@@ -16,7 +16,7 @@ zenity --info --title="Carte IGN" --text="Ce script utilise QGIS, un logiciel op
 zenity --warning --title="Confirmation" --text="Vous êtes sur le point de continuer. Si l'utilisation de ce script n'est pas conforme au politique de IGN-FRANCE, InformatiquePro sera en aucun cas responsable de votre manquement au condition d'utilisation IGN-FRANCE."
 
 # Demander le numéro de département
-departement=$(zenity --entry --title="Choix du département" --text="Entrez le numéro du département que vous souhaitez télécharger (ex: 56 pour Morbihan, 75 pour Paris) :")
+departement=$(zenity --entry --title="Choix du département" --text="Entrez le numéro du département que vous souhaitez télécharger (ex: 56 pour Morbihan, 75 pour Paris et 01 pour Ain) :")
 
 # Vérifier si une entrée a été fournie
 if [ -z "$departement" ]; then
@@ -61,7 +61,7 @@ case "$departement" in
     fichier_gpkg="BDTOPO_3-4_TOUSTHEMES_GPKG_LAMB93_D001_2024-09-15/BDTOPO/1_DONNEES_LIVRAISON_2024-09-00152/BDT_3-4_GPKG_LAMB93_D001-ED2024-09-15/BDT_3-4_GPKG_LAMB93_D001-ED2024-09-15.gpkg"
     ;;
   *)
-    zenity --error --title="Erreur" --text="Département non supporté. Actuellement, seuls les départements 56 et 75 sont pris en charge."
+    zenity --error --title="Erreur" --text="Département non supporté. Actuellement, seuls les départements 56, 75 et 01 sont pris en charge."
     exit 1
     ;;
 esac

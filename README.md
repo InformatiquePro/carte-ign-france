@@ -1,7 +1,8 @@
 **Bonjour !**
 *Sorry for the English, I speak French*
 
-Voila des scriptes qui permettent de télécharger les cartes IGN du Morbihan (56) et de Paris (75).
+Voila le scripte permettant de téléchargers les cartes IGN.
+*Note : si vous avez déja téléchargé le scripte et des nouvelles régions sont sortis entre-temps, sois retélécharger le scripte, sois, si vous il y a le fichier `dep-fr-ign.txt`alors supprimmer ce fichier et rééxécuter le scripte.*
 
 ## Avertissement !!!
 

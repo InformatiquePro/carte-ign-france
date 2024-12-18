@@ -1,5 +1,6 @@
 ## Département compatible : 
 **Voila la liste de tous les départements français. L'outre-mer est inclus à la fin.**
+*Les départements non compatibles actuellement deviendront compatible à un moment donné*
 
 
 | Département            | Code                | Taille | Supporté   |

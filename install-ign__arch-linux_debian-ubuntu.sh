@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Vérifier si zenity est installer
+# Vérifier si zenity est installé
 if ! command -v zenity &> /dev/null; then
   echo "zenity n'est pas installé. Installation en cours..."
   if [ -f /etc/arch-release ] || [ -f /etc/manjaro-release ]; then
@@ -11,16 +11,35 @@ if ! command -v zenity &> /dev/null; then
   fi
 fi
 
+# Définir l'URL du fichier dep-fr-ign.txt
+url_dep_ign="https://raw.githubusercontent.com/InformatiquePro/carte-ign-france/refs/heads/main/dep-fr-ign.txt"
+
+# Vérifier si le fichier dep-fr-ign.txt existe, sinon le télécharger
+if [ ! -f "dep-fr-ign.txt" ]; then
+  zenity --info --title="Téléchargement nécessaire" --text="Le fichier dep-fr-ign.txt est introuvable. Cliquer sur Valider pour le télécharger."
+  wget "$url_dep_ign" -O dep-fr-ign.txt
+  if [ $? -ne 0 ]; then
+    zenity --error --title="Erreur" --text="Impossible de télécharger le fichier dep-fr-ign.txt. Vérifiez votre connexion Internet et réessayez."
+    exit 1
+  fi
+fi
+
+
 zenity --info --title="Carte IGN" --text="Ce script utilise QGIS, un logiciel open-source de cartographie, et p7zip-full pour décompresser les fichiers. Les cartes sont récupérées sur les serveurs IGN-France. L'utilisation des cartes implique l'acceptation des conditions d'utilisation de IGN-France. Pour plus d'informations : https://geoservices.ign.fr/cgu-licences."
 
-zenity --warning --title="Confirmation" --text="Vous êtes sur le point de continuer. Si l'utilisation de ce script n'est pas conforme au politique de IGN-FRANCE, InformatiquePro sera en aucun cas responsable de votre manquement au condition d'utilisation IGN-FRANCE."
+# Lire le fichier dep-fr-ign.txt dans un tableau associatif
+declare -A urls fichiers_gpkg
+while IFS=";" read -r dep url fichier_gpkg; do
+  urls["$dep"]="$url"
+  fichiers_gpkg["$dep"]="$fichier_gpkg"
+done < dep-fr-ign.txt
 
 # Demander le numéro de département
-departement=$(zenity --entry --title="Choix du département" --text="Entrez le numéro du département que vous souhaitez télécharger (ex: 56 pour Morbihan, 75 pour Paris et 01 pour Ain) :")
+departement=$(zenity --entry --title="Choix du département" --text="Entrez le numéro du département que vous souhaitez télécharger :")
 
-# Vérifier si une entrée a été fournie
-if [ -z "$departement" ]; then
-  zenity --error --title="Erreur" --text="Aucun numéro de département fourni. Le script va s'arrêter."
+# Vérifier si le département existe dans le fichier
+if [ -z "${urls[$departement]}" ]; then
+  zenity --error --title="Erreur" --text="Département non supporté. Veuillez vérifier le fichier dep-fr-ign.txt."
   exit 1
 fi
 
@@ -46,31 +65,9 @@ if ! command -v qgis &> /dev/null; then
   fi
 fi
 
-# Définir les URLs et les chemins selon le département
-case "$departement" in
-  56)
-    url="https://data.geopf.fr/telechargement/download/BDTOPO/BDTOPO_3-4_TOUSTHEMES_GPKG_LAMB93_D056_2024-09-15/BDTOPO_3-4_TOUSTHEMES_GPKG_LAMB93_D056_2024-09-15.7z"
-    fichier_gpkg="BDTOPO_3-4_TOUSTHEMES_GPKG_LAMB93_D056_2024-09-15/BDTOPO/1_DONNEES_LIVRAISON_2024-09-00152/BDT_3-4_GPKG_LAMB93_D056-ED2024-09-15/BDT_3-4_GPKG_LAMB93_D056-ED2024-09-15.gpkg"
-    ;;
-  75)
-    url="https://data.geopf.fr/telechargement/download/BDTOPO/BDTOPO_3-4_TOUSTHEMES_GPKG_LAMB93_D075_2024-09-15/BDTOPO_3-4_TOUSTHEMES_GPKG_LAMB93_D075_2024-09-15.7z"
-    fichier_gpkg="BDTOPO_3-4_TOUSTHEMES_GPKG_LAMB93_D075_2024-09-15/BDTOPO/1_DONNEES_LIVRAISON_2024-09-00152/BDT_3-4_GPKG_LAMB93_D075-ED2024-09-15/BDT_3-4_GPKG_LAMB93_D075-ED2024-09-15.gpkg"
-    ;;
-  01)
-    url="https://data.geopf.fr/telechargement/download/BDTOPO/BDTOPO_3-4_TOUSTHEMES_GPKG_LAMB93_D001_2024-09-15/BDTOPO_3-4_TOUSTHEMES_GPKG_LAMB93_D001_2024-09-15.7z"
-    fichier_gpkg="BDTOPO_3-4_TOUSTHEMES_GPKG_LAMB93_D001_2024-09-15/BDTOPO/1_DONNEES_LIVRAISON_2024-09-00152/BDT_3-4_GPKG_LAMB93_D001-ED2024-09-15/BDT_3-4_GPKG_LAMB93_D001-ED2024-09-15.gpkg"
-    ;;
-  976)
-    url="https://data.geopf.fr/telechargement/download/BDTOPO/BDTOPO_3-4_TOUSTHEMES_GPKG_RGM04UTM38S_D976_2024-09-15/BDTOPO_3-4_TOUSTHEMES_GPKG_RGM04UTM38S_D976_2024-09-15.7z"
-    fichier_gpkg="BDTOPO_3-4_TOUSTHEMES_GPKG_RGM04UTM38S_D976_2024-09-15/BDTOPO/1_DONNEES_LIVRAISON_2024-09-00152/BDT_3-4_GPKG_RGM04UTM38S_D976-ED2024-09-15/BDT_3-4_GPKG_RGM04UTM38S_D976-ED2024-09-15.gpkg"
-    ;;
-  *)
-    zenity --error --title="Erreur" --text="Département non supporté. Pour connaitre les départements compatible, rdv sur ce fichier du projet Github : https://github.com/InformatiquePro/carte-ign-france/blob/main/departement-compatible.md"
-    exit 1
-    ;;
-esac
-
 # Télécharger la carte
+url="${urls[$departement]}"
+fichier_gpkg="${fichiers_gpkg[$departement]}"
 wget "$url" -O "carte_$departement.7z"
 if [ $? -ne 0 ]; then
   zenity --error --title="Erreur" --text="Le téléchargement du fichier a échoué. Vérifiez votre connexion Internet et réessayez."
@@ -86,7 +83,7 @@ fi
 
 zenity --info --title="Ré-ouverture" --text="Si vous voulez ré-ouvrir les cartes, ne rééxécutez pas ce script, ouvrez plutot le dossier télécharger, ensuite BDTOPO, après 1_DONNEES_LIVRAISON_2024-09-00152, ensuite BDT_3-4_GPKG_LAMB93_D0/votre-département/, et enfin ouvrez ce fichier : BDT_3-4_GPKG_LAMB93_D0/votre-département/.gpkg dans qgis. "
 
-# Ouvrir le fichier .gpkg dans QGIS
+# Ouvrir le fichier dans QGIS
 if [ -f "$fichier_gpkg" ]; then
   qgis "$fichier_gpkg"
 else

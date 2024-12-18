@@ -19,7 +19,7 @@ De plus, même si cela fonctionne aussi avec Windows, ce script fonctionne **UNI
 | ------------------ | -------------------- | -----  | ---------- |
 | Morbihan           | 56                   | 3.2Go  | ✅         |
 | Paris              | 75                   | 1.5Go  | ✅         |
-| Ain                | 01                   | 2.5GB  | ✅         |
+| Ain                | 01                   | 2.5Go  | ✅         |
 
 *Les autres départements deviendront compatible à un moment donné*
 

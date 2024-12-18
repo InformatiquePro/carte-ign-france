@@ -2,7 +2,6 @@
 *Sorry for the English, I speak French*
 
 Voila des scriptes qui permettent de télécharger les cartes IGN du Morbihan (56) et de Paris (75).
-*Note : Le scripte de pour Ubuntu/Debian n'est plus **maintenut**, il ne recevra plus les nouveautés et je ne vous recommande pas de l'utiliser.*
 
 ## Avertissement !!!
 
@@ -21,8 +20,8 @@ De plus, même si cela fonctionne aussi avec Windows, ce script fonctionne **UNI
 
 ## Pour l'utiliser, c'est simple :
 
-*Note : ce script est en développement, je l'ai uniquement testé sur Manjaro Linux et Ubuntu, donc il est possible de rencontrer des erreurs. Un minimum de connaissance en Linux de manière générale est très fortement recommander avant de lancer le scripte. InformatiquePro n'est en aucun cas responsable de tous problème futur causé par mon scripte.*
+*Note : ce script est en développement, je l'ai uniquement testé sur Manjaro Linux et Ubuntu 24.04, donc il est possible de rencontrer des erreurs. Un minimum de connaissance en Linux de manière générale est très fortement recommander avant de lancer le scripte. InformatiquePro n'est en aucun cas responsable de tous problème futur causé par mon scripte.*
 
 **
-Lancer dans votre terminal, après avoir récupéré le fichier correspondant à votre distribution Linux, et être positionner dans le dossier ou il est télécharger : `chmod +X le-nom-du-script-choisi.sh` puis `./le-nom-du-script_choisi.sh`
+Lancer dans votre terminal, après avoir récupéré le fichier correspondant à votre distribution Linux, et être positionner dans le dossier ou il est télécharger : `chmod +X install-ign__arch-linux_debian-ubuntu.sh` puis `./install-ign__arch-linux_debian-ubuntu.sh`
 **ET voila !!**

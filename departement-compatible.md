@@ -101,7 +101,7 @@
 | Seine-Saint-Denis      | 93                  | ?      | ❌         |
 | Val-de-Marne           | 94                  | ?      | ❌         |
 | Val-d'Oise             | 95                  | ?      | ❌         |
-| Guadeloupe             | 971                 | ?      | ❌         |
+| Guadeloupe             | 971                 | 809.1Mo| ✅         |
 | Martinique             | 972                 | ?      | ❌         |
 | Guyane                 | 973                 | ?      | ❌         |
 | La Réunion             | 974                 | ?      | ❌         |

@@ -7,7 +7,7 @@
 |------------------------|---------------------|--------|------------|
 | Ain                    | 01                  | 2.5Go  | ✅         |
 | Aisne                  | 02                  | 2Go    | ✅         |
-| Allier                 | 03                  | ?      | ❌         |
+| Allier                 | 03                  | 2.3Go  | ✅         |
 | Alpes de Haute-Provence| 04                  | ?      | ❌         |
 | Hautes-Alpes           | 05                  | ?      | ❌         |
 | Alpes-Maritimes        | 06                  | ?      | ❌         |

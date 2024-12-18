@@ -13,6 +13,13 @@ De plus, même si cela fonctionne aussi avec Windows, ce script fonctionne **UNI
 *Note 1 : le script pour Arch Linux détecte si vous êtes sur arch linux (ou dérivée) en vérifiant la présence de ce fichier : `/etc/arch-release` et si votre distribution basée sur Arch Linux à retirer ce fichier, le scripte lancera la version debian/ubuntu. Noter que ce scripte est encore perfectible.**
 
 
+## Région compatible : 
+
+**56 -- Morbihan** : ✅
+**75 -- Paris** : ✅
+**01 -- Ain** : ✅
+*Les autres régions deviendront compatible à un moment donné*
+
 ## Pour l'utiliser, c'est simple :
 
 *Note : ce script est en développement, je l'ai uniquement testé sur Manjaro Linux et Ubuntu, donc il est possible de rencontrer des erreurs. Un minimum de connaissance en Linux de manière générale est très fortement recommander avant de lancer le scripte. InformatiquePro n'est en aucun cas responsable de tous problème futur causé par mon scripte.*

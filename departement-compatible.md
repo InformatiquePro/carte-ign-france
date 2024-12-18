@@ -6,7 +6,7 @@
 | Département            | Code                | Taille | Supporté   |
 |------------------------|---------------------|--------|------------|
 | Ain                    | 01                  | 2.5Go  | ✅         |
-| Aisne                  | 02                  | ?      | ❌         |
+| Aisne                  | 02                  | 2Go    | ✅         |
 | Allier                 | 03                  | ?      | ❌         |
 | Alpes de Haute-Provence| 04                  | ?      | ❌         |
 | Hautes-Alpes           | 05                  | ?      | ❌         |

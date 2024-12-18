@@ -105,7 +105,7 @@
 | Martinique             | 972                 | ?      | ❌         |
 | Guyane                 | 973                 | ?      | ❌         |
 | La Réunion             | 974                 | ?      | ❌         |
-| Mayotte                | 976                 | ?      | ❌         |
+| Mayotte                | 976                 | 188,3Mo| ✅         |
 
 
 

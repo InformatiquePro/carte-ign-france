@@ -2,7 +2,7 @@
 *Sorry for the English, I speak French*
 
 Voila le scripte permettant de téléchargers les cartes IGN.
-*Note : si vous avez déja téléchargé le scripte et des nouvelles régions sont sortis entre-temps, sois retélécharger le scripte, sois, si vous il y a le fichier `dep-fr-ign.txt`alors supprimmer ce fichier et rééxécuter le scripte.*
+*Note : si vous avez déja téléchargé le scripte et des nouvelles régions sont sortis entre-temps, sois retélécharger le scripte, sois, si il y a le fichier `dep-fr-ign.txt`alors supprimmer ce fichier et rééxécuter le scripte.*
 
 ## Avertissement !!!
 

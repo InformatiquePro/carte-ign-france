@@ -18,7 +18,7 @@ De plus, même si cela fonctionne aussi avec Windows, ce script fonctionne **UNI
 **56 -- Morbihan** : ✅
 **75 -- Paris** : ✅
 **01 -- Ain** : ✅
-*Les autres régions deviendront compatible à un moment donné*
+*Les autres départements deviendront compatible à un moment donné*
 
 ## Pour l'utiliser, c'est simple :
 

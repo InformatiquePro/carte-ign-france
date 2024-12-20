@@ -7,7 +7,7 @@ Voila le scripte permettant de téléchargers les cartes IGN.
 ## Avertissement !!!
 
 **
-Ce script utilise QGIS, un logiciel open-source de donner cartographique, p7zip-full (p7zip pour le srcipt compatible Arch Linux) un équivalent de 7zip pour linux open-source pour décompresser les fichiers 7z. La carte est récupérer sur les serveurs IGN-FRANCE. Cela implique donc dès l'utilisation de ces cartes l'acceptation immédiate de toutes les conditions d'utilisation de IGN-FRANCE. Pour plus d’information, consulter : https://geoservices.ign.fr/cgu-licences .
+Ce script utilise QGIS, un logiciel open-source de donner cartographique, p7zip-full (p7zip pour le srcipt compatible Arch Linux) un équivalent de 7zip pour linux open-source pour décompresser les fichiers 7z. La carte est récupérer sur les serveurs IGN-FRANCE. Cela implique donc dès l'utilisation de ces cartes l'acceptation immédiate de toutes les conditions d'utilisation de IGN-FRANCE. Pour plus d’information, consulter : https://geoservices.ign.fr/cgu-licences et https://www.ign.fr/publications-de-l-ign/institut/informations_legales_administratives/Decision_2021-295_tarification.pdf.
 De plus, même si cela fonctionne aussi avec Windows, ce script fonctionne **UNIQUEMENT** sur les distributions Linux basé sur **Debian/Ubuntu** *et* **Arch Linux**. Ce script peut être adapté à d'autre distribution linux, voir même sur Windows, mais actuellement il ne le fait pas.
 
 *Note 1 : le script pour Arch Linux détecte si vous êtes sur arch linux (ou dérivée) en vérifiant la présence de ce fichier : `/etc/arch-release` et si votre distribution basée sur Arch Linux à retirer ce fichier, le scripte lancera la version debian/ubuntu. Noter que ce scripte est encore perfectible.**

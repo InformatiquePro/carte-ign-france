@@ -1,6 +1,8 @@
 **Bonjour !**
 *Sorry for the English, I speak French*
 
+*Très important : le scripte utilise les SCANs BDTOPO de l'IGN*
+
 Voila le scripte permettant de téléchargers les cartes IGN.
 *Note : si vous avez déja téléchargé le scripte et des nouvelles régions sont sortis entre-temps, sois retélécharger le scripte, sois, si il y a le fichier `dep-fr-ign.txt`alors supprimmer ce fichier et rééxécuter le scripte.*
 

@@ -16,7 +16,7 @@ url_dep_ign="https://raw.githubusercontent.com/InformatiquePro/carte-ign-france/
 
 # Vérifier si le fichier dep-fr-ign.txt existe, sinon le télécharger
 if [ ! -f "dep-fr-ign.txt" ]; then
-  zenity --info --title="Téléchargement nécessaire" --text="Le fichier dep-fr-ign.txt est introuvable. Cliquer sur Valider pour le télécharger."
+  zenity --info --title="Téléchargement nécessaire" --text="Le fichier dep-fr-ign.txt (ce fichier sert à télécherger les cartes) est introuvable. Cliquer sur Valider pour le télécharger."
   wget "$url_dep_ign" -O dep-fr-ign.txt
   if [ $? -ne 0 ]; then
     zenity --error --title="Erreur" --text="Impossible de télécharger le fichier dep-fr-ign.txt. Vérifiez votre connexion Internet et réessayez."

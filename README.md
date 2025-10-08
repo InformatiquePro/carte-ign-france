@@ -23,7 +23,8 @@ De plus, même si cela fonctionne aussi avec Windows, ce script fonctionne **UNI
 
 ## Pour l'utiliser, c'est simple :
 >[!WARNING]
-> *Ce script est en développement, je l'ai uniquement testé sur Manjaro Linux et Ubuntu 24.04, donc il est possible de rencontrer des erreurs. Un minimum de connaissance en Linux de manière générale est très fortement recommander avant de lancer > le scripte. InformatiquePro n'est en aucun cas responsable de tous problème futur causé par mon scripte.*
+> *Ce script est en développement, je l'ai uniquement testé sur Manjaro Linux et Ubuntu 24.04, donc il est possible de rencontrer des erreurs. Un minimum de connaissance en Linux de manière générale est très fortement recommander avant de lancer le
+> scripte. Je ne suis en aucun cas responsable de tous problème futur causé par mon scripte.*
 
 **
 Lancer dans votre terminal, après avoir récupéré le fichier correspondant à votre distribution Linux, et être positionner dans le dossier ou il est télécharger : `chmod +X install-ign__arch-linux_debian-ubuntu.sh` puis `./install-ign__arch-linux_debian-ubuntu.sh`

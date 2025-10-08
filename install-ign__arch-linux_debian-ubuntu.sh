@@ -39,7 +39,7 @@ departement=$(zenity --entry --title="Choix du département" --text="Entrez le n
 
 # Vérifier si le département existe dans le fichier
 if [ -z "${urls[$departement]}" ]; then
-  zenity --error --title="Erreur" --text="Département non supporté. Veuillez vérifier le fichier dep-fr-ign.txt."
+  zenity --error --title="Erreur" --text="Département non supporté. Veuillez vérifier que votre département est supporté ici : https://github.com/InformatiquePro/carte-ign-france/blob/main/departement-compatible.md "
   exit 1
 fi
 

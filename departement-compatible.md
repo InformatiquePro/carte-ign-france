@@ -1,3 +1,6 @@
+> [!WARNING]
+> L'IGN à déplacer les fichiers téléchechargés à d'autre endroit sur ces serveurs. Le scripte n'est plus en capacité de télécharger les cartes, pour l'instant je suis sur d'autre projet, je l'adapterai si j'ai le temps !
+
 ## Département compatible : 
 **Voila la liste de tous les départements français. L'outre-mer est inclus à la fin.**
 *Les départements non compatibles actuellement deviendront compatible à un moment donné.*

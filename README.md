@@ -66,5 +66,5 @@ chmod +x carte-ign-france.sh
 ```
 **4. Lancez le script !**
 ```sh
-./carte-ign-france.sh
+./install-ign__arch-linux_debian-ubuntu.sh
 ```

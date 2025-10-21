@@ -1,34 +1,70 @@
-> [!WARNING]
-> L'IGN à déplacer les fichiers de carte à d'autre endroit. Pour l'instant je n'ai pas le temps d'adapter ce scripte à ces changements.  
 
-**Bonjour !**
-*Sorry for the English, I speak French*
+# 🗺️ Carte IGN France 📡
 
-*Très important : le scripte utilise les SCANs BDTOPO de l'IGN*
+![Statut du Projet](https://img.shields.io/badge/status-en%20développement-yellow)
+![Compatibilité](https://img.shields.io/badge/compatibilité-Debian%20%7C%20Arch-blue)
+![Contributions](https://img.shields.io/badge/contributions-bienvenues-brightgreen)
 
-Voila le scripte permettant de téléchargers les cartes IGN.
-*Note : si vous avez déja téléchargé le scripte et des nouvelles régions sont sortis entre-temps, sois retélécharger le scripte, sois, si il y a le fichier `dep-fr-ign.txt`alors supprimmer ce fichier et rééxécuter le scripte.*
+Un script shell simple et efficace pour télécharger les SCANs BDTOPO officiels de l'IGN (Institut National de l'Information Géographique et Forestière).
 
-## Avertissement !!!
+<p align="center">
+  <img src="https://raw.githubusercontent.com/asciinema/asciinema-server/master/app/assets/images/logo_big.gif" alt="Démonstration du script" width="70%"/>
+</p>
 
-**
-Ce script utilise QGIS, un logiciel open-source de donner cartographique, p7zip-full (p7zip pour le srcipt compatible Arch Linux) un équivalent de 7zip pour linux open-source pour décompresser les fichiers 7z. La carte est récupérer sur les serveurs IGN-FRANCE. Cela implique donc dès l'utilisation de ces cartes l'acceptation immédiate de toutes les conditions d'utilisation de IGN-FRANCE. Pour plus d’information, consulter : https://geoservices.ign.fr/cgu-licences et https://www.ign.fr/publications-de-l-ign/institut/informations_legales_administratives/Decision_2021-295_tarification.pdf.
-De plus, même si cela fonctionne aussi avec Windows, ce script fonctionne **UNIQUEMENT** sur les distributions Linux basé sur **Debian/Ubuntu** *et* **Arch Linux**. Ce script peut être adapté à d'autre distribution linux, voir même sur Windows, mais actuellement il ne le fait pas.
+---
 
-*Note 1 : le script pour Arch Linux détecte si vous êtes sur arch linux (ou dérivée) en vérifiant la présence de ce fichier : `/etc/arch-release` et si votre distribution basée sur Arch Linux à retirer ce fichier, le scripte lancera la version debian/ubuntu. Noter que ce scripte est encore perfectible.**
+## ⚠️ Avertissements Importants
 
+> [!CAUTION]
+> ### Projet en cours de développement (WIP)
+> Tous les départements français ne sont pas encore compatibles ou testés. La liste est activement mise à jour. Merci de votre patience !
+> L'IGN à déplacer les fichiers de carte à d'autre endroit. Pour l'instant je n'ai pas le temps d'adapter ce scripte à ces changements.   **CE SCRIPTE N'EST DONC PLUS EN MESURE DE FONCTIONNER**
 
-## Département compatible : 
+> [!IMPORTANT]
+> ### Compatibilité du Système
+> Ce script est conçu *uniquement* pour les distributions basées sur :
+> * ✅ **Debian / Ubuntu** (et dérivées comme Linux Mint, Pop!_OS)
+> * ✅ **Arch Linux / Manjaro** (et dérivées)
+>
+> ⛔ Il **N'EST PAS** compatible avec les distributions basées sur RHEL (Fedora, CentOS, Rocky Linux) en raison de différences dans la gestion des paquets et des dépendances.
 
-[Liste des départements compatibles](https://github.com/InformatiquePro/carte-ign-france/blob/main/departement-compatible.md)
+---
 
+## ✨ Fonctionnalités
 
+* **Téléchargement Simplifié** : Une seule commande pour lancer le processus.
+* **Menu Interactif** : Choisissez votre département dans une liste claire.
+* **Léger et Rapide** : Un simple script shell, sans dépendances lourdes.
+* **Données à Jour** : Récupère les données BDTOPO directement depuis les serveurs de l'IGN.
+* **Open Source** : Le code est transparent et ouvert aux contributions.
 
-## Pour l'utiliser, c'est simple :
->[!WARNING]
-> *Ce script est en développement, je l'ai uniquement testé sur Manjaro Linux et Ubuntu 24.04, donc il est possible de rencontrer des erreurs. Un minimum de connaissance en Linux de manière générale est très fortement recommander avant de lancer le
-> scripte. Je ne suis en aucun cas responsable de tous problème futur causé par mon scripte.*
+## 🌍 Départements Compatibles
 
-**
-Lancer dans votre terminal, après avoir récupéré le fichier correspondant à votre distribution Linux, et être positionner dans le dossier ou il est télécharger : `chmod +X install-ign__arch-linux_debian-ubuntu.sh` puis `./install-ign__arch-linux_debian-ubuntu.sh`
-**ET voila !!**
+La liste des départements disponibles est maintenue dans un fichier séparé pour plus de clarté.
+
+➡️ **[Cliquez ici pour voir la liste des départements compatibles](https://github.com/InformatiquePro/carte-ign-france/blob/main/departement-compatible.md)**
+
+Si votre département n'est pas dans la liste, c'est qu'il n'a pas encore été ajouté ou testé.
+
+---
+
+## 🚀 Installation et Lancement
+
+Aucune installation n'est requise, suivez simplement ces étapes dans votre terminal :
+
+**1. Clonez le dépôt :**
+```sh
+git clone https://github.com/InformatiquePro/carte-ign-france.git
+```
+**2. Accédez au dossier :**
+```sh
+cd carte-ign-france
+```
+**3. Donnez les droits d'exécution au script :**
+```sh
+chmod +x carte-ign-france.sh
+```
+**4. Lancez le script !**
+```sh
+./carte-ign-france.sh
+```

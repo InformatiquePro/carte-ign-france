@@ -16,7 +16,7 @@ Un script shell simple et efficace pour télécharger les SCANs BDTOPO officiels
 ## ⚠️ Avertissements Importants
 
 > [!CAUTION]
-> ### Projet en cours de développement (WIP)
+> ### Projet en cours de développement 
 > Tous les départements français ne sont pas encore compatibles ou testés. La liste est activement mise à jour. Merci de votre patience !
 > L'IGN à déplacer les fichiers de carte à d'autre endroit. Pour l'instant je n'ai pas le temps d'adapter ce scripte à ces changements.   **CE SCRIPTE N'EST DONC PLUS EN MESURE DE FONCTIONNER**
 

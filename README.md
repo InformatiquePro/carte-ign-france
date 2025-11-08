@@ -62,7 +62,7 @@ cd carte-ign-france
 ```
 **3. Donnez les droits d'exécution au script :**
 ```sh
-chmod +x carte-ign-france.sh
+chmod +x install-ign__arch-linux_debian-ubuntu.sh
 ```
 **4. Lancez le script !**
 ```sh
